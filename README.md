@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 3. Run the tracker:
 ```bash
-python cli/main.py
+python cli.py
 ```
 
 ## Example Commands
