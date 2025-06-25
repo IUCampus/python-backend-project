@@ -1,0 +1,26 @@
+{
+    "james burn": {
+        "username": "James Burn",
+        "habits": [
+            {
+                "name": "Cycling",
+                "periodicity": "weekly",
+                "completions": [
+                    "2025-06-25T21:52:20.250464"
+                ]
+            },
+            {
+                "name": "Acting Movies",
+                "periodicity": "weekly",
+                "completions": [
+                    "2025-06-25T22:24:30.135389"
+                ]
+            },
+            {
+                "name": "Dancing",
+                "periodicity": "weekly",
+                "completions": []
+            }
+        ]
+    }
+}
