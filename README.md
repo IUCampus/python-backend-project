@@ -12,7 +12,7 @@ A habit tracking application written in Python. It supports daily and weekly hab
 ## Setup Instructions
 1. Clone the repo:
 ```bash
-git clone https://github.com/IUCampus/Frank-Habits-Tracker.git
+git clone https://github.com/IUCampus/python-backend-project.git
 cd habit-tracker
 ```
 
@@ -27,17 +27,37 @@ python cli.py
 ```
 
 ## UML Class Diagram
-```bash
-![image](https://github.com/user-attachments/assets/dd7babfb-3d0c-438c-8d1e-9ed319d0f536)
+
+![image](https://github.com/user-attachments/assets/5fac31e7-2926-429f-9bb2-c5a58fe7aebe)
+
+![image](https://github.com/user-attachments/assets/26b47ce7-8d3e-4570-b1bb-6721f0f59bdb)
+
+
 
 ```
 
 ## Project Structure
-- `core/`: Core classes and logic
-- `analytics/`: Functional analytics module
-- `cli/`: CLI logic
-- `data/`: Predefined habits and JSON storage
-- `tests/`: Unit test suite
 
-## License
-MIT
+![image](https://github.com/user-attachments/assets/77504591-fdeb-4233-9258-fcabcbc79a9a)
+
+
+## Technologies Used
+
+Python 3.7+
+
+SQLite3 for persistence
+
+click for CLI
+
+unittest or pytest for testing
+
+JSON for fixture data (optional)
+
+Any other libraries or helper tools (e.g., tabulate, datetime)
+
+
+## Contacts
+
+Email: chigozie-cyriacus.francis@iu-study.org
+
+![website](https://franciswebandapp.com)
