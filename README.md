@@ -26,11 +26,10 @@ pip install -r requirements.txt
 python cli.py
 ```
 
-## Example Commands
+## UML Class Diagram
 ```bash
-python cli/main.py add "Meditate" --period daily
-python cli/main.py complete "Meditate"
-python cli/main.py analytics longest-streak
+![image](https://github.com/user-attachments/assets/dd7babfb-3d0c-438c-8d1e-9ed319d0f536)
+
 ```
 
 ## Project Structure
