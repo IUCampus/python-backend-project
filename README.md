@@ -35,7 +35,8 @@ python cli.py
 
 ## Project Structure
 
-![image](https://github.com/user-attachments/assets/77504591-fdeb-4233-9258-fcabcbc79a9a)
+![image](https://github.com/user-attachments/assets/2870c500-db85-4e46-98d2-d00c435b1f1f)
+
 
 
 ## Technologies Used
