@@ -22,5 +22,33 @@
                 "completions": []
             }
         ]
+    },
+    "frank software": {
+        "username": "Frank Software",
+        "habits": [
+            {
+                "name": "1 Liter Water Drinking",
+                "periodicity": "daily",
+                "completions": [
+                    "2025-06-26T10:56:42.560355",
+                    "2025-06-26T11:07:26.561695",
+                    "2025-06-26T11:11:51.811371"
+                ]
+            },
+            {
+                "name": "News Paper Reading",
+                "periodicity": "daily",
+                "completions": []
+            },
+            {
+                "name": "1 Liter Water Drinking",
+                "periodicity": "daily",
+                "completions": []
+            }
+        ]
+    },
+    "laure savonet": {
+        "username": "laure Savonet",
+        "habits": []
     }
 }

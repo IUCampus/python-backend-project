@@ -2,9 +2,11 @@
 from user import User
 from tracker import Habit
 from storage import Storage
-from analytics import get_expected_periods, get_longest_streak, most_missed_habits, get_current_habits_by_period
-from datetime import datetime, timedelta  # Add this import
+from datetime import datetime, timedelta
 
+def get_current_habits_by_period(habits, period):
+    """Filter habits by period"""
+    return [h for h in habits if h.periodicity.lower() == period.lower()]
 
 def main():
     storage = Storage()
@@ -50,14 +52,23 @@ def main():
         print()
 
         if choice == "1":
-            period = input("Enter period (daily/weekly): ")
+            period = input("Enter period (daily/weekly): ").lower()
+            if period not in ['daily', 'weekly']:
+                print("Invalid period. Please enter 'daily' or 'weekly'")
+                continue
             habits = get_current_habits_by_period(user.habits, period)
-            for h in habits:
-                print(f"{h.name} ({h.periodicity})")
+            if not habits:
+                print("You don't have any habits for this period yet !")
+            else:
+                for h in habits:
+                    print(f"{h.name} ({h.periodicity})")
 
         elif choice == "2":
             name = input("Enter habit name: ")
-            periodicity = input("Enter periodicity (daily/weekly): ")
+            periodicity = input("Enter periodicity (daily/weekly): ").lower()
+            if periodicity not in ['daily', 'weekly']:
+                print("Invalid periodicity. Please enter 'daily' or 'weekly'")
+                continue
             habit = Habit(name, periodicity)
             user.add_habit(habit)
             print(f"Habit '{name}' added to {username}.")
@@ -69,26 +80,34 @@ def main():
                 habit.complete()
                 print("Habit marked as completed.")
             else:
-                print("Habit not found.")
+                print("Habit not found.Use Menu 2. to Add a new habit")
 
         elif choice == "4":
-            for h in user.habits:
-                print(f"{h.name}: {h.get_streak()} streak")
+            if not user.habits:
+                print("You don't have any streak yet.Please Add a habit first.")
+            else:
+                print("Current streaks\n")
+                print("----------------")
+                for h in user.habits:
+                    print(f"{h.name}: {h.get_streak()} streak")
 
         elif choice == "5":
-            # Add date range for analysis (last 30 days by default)
+            # Simple most missed habits implementation
             end_date = datetime.now()
             start_date = end_date - timedelta(days=30)
-            missed_habit, count = most_missed_habits(user, start_date, end_date)
-            if missed_habit:
-                print(f"Most missed habit: {missed_habit} ({count} times)")
+            habits_missed = [(h.name, h.missed_count()) for h in user.habits]
+            if habits_missed:
+                most_missed = max(habits_missed, key=lambda x: x[1])
+                print(f"Most missed habit: {most_missed[0]} ({most_missed[1]} times)")
             else:
                 print("No missed habits found in the last 30 days.")
 
         elif choice == "6":
-            habit_name, streak = get_longest_streak(user)  # Fixed: changed current_user to user
-            if habit_name:
-                print(f"Longest streak: {habit_name} with {streak} completions")
+            # Simple longest streak implementation
+            habits_streaks = [(h.name, h.get_streak()) for h in user.habits]
+            if habits_streaks:
+                longest = max(habits_streaks, key=lambda x: x[1])
+                print(f"Longest streak: {longest[0]} with {longest[1]} completions")
             else:
                 print("No habits found or no streaks recorded.")
 
@@ -99,7 +118,6 @@ def main():
 
         else:
             print("Invalid choice. Please try again.")
-
 
 if __name__ == "__main__":
     main()

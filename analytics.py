@@ -4,6 +4,8 @@ from collections import defaultdict
 
 def get_current_habits_by_period(habits, period):
     """Filter habits by their periodicity (daily/weekly)"""
+    if not habits:
+        return ["you don't have any habits yet"]
     return [habit for habit in habits if habit.periodicity.lower() == period.lower()]
 
 def get_longest_streak(user):
