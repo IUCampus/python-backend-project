@@ -33,9 +33,6 @@ python cli.py
 ![image](https://github.com/user-attachments/assets/26b47ce7-8d3e-4570-b1bb-6721f0f59bdb)
 
 
-
-```
-
 ## Project Structure
 
 ![image](https://github.com/user-attachments/assets/77504591-fdeb-4233-9258-fcabcbc79a9a)
