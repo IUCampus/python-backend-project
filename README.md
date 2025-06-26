@@ -56,5 +56,4 @@ Any other libraries or helper tools (e.g., tabulate, datetime)
 ## Contacts
 
 Email: chigozie-cyriacus.francis@iu-study.org
-
-![website](https://franciswebandapp.com)
+[website](https://franciswebandapp.com)
