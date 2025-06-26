@@ -12,7 +12,7 @@ A habit tracking application written in Python. It supports daily and weekly hab
 ## Setup Instructions
 1. Clone the repo:
 ```bash
-git clone https://github.com/yourusername/habit-tracker.git
+git clone https://github.com/IUCampus/Frank-Habits-Tracker.git
 cd habit-tracker
 ```
 
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 3. Run the tracker:
 ```bash
-python cli/main.py
+python cli.py
 ```
 
 ## Example Commands
