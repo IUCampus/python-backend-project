@@ -7,7 +7,7 @@ A habit tracking application written in Python. It supports daily and weekly hab
 - Create and complete daily or weekly habits.
 - View analytics on habit performance and streaks.
 - Save/load habit data to/from JSON or SQLite.
-- Command-line interface (CLI) using Click or argparse.
+- Command-line interface (CLI) using Click.
 
 ## Setup Instructions
 1. Clone the repo:
@@ -51,11 +51,11 @@ unittest or pytest for testing
 
 JSON for fixture data (optional)
 
-Any other libraries or helper tools (e.g., tabulate, datetime)
+Other libraries or helper tools (e.g.,datetime)
 
 
 ## Contacts
 
 Email: chigozie-cyriacus.francis@iu-study.org
 
-[website](https://www.franciswebapp.com/home)
+Website: [Chigozie Francis](https://www.franciswebapp.com/home)
